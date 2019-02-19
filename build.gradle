@@ -1,0 +1,27 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.2.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.barclays'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //implementation 'org.aspectj:aspectjweaver:1.9.2'
+    implementation 'org.springframework.boot:spring-boot-starter'
+
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+    //implementation 'org.springframework.boot:spring-boot-starter-web'
+    //implementation 'org.apache.kafka:kafka-streams'
+    implementation 'org.springframework.kafka:spring-kafka'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
+}

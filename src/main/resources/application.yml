@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active:
+    - default
+  application:
+    name: kafka-spring-client
+  output:
+    ansi:
+      enabled: always
+logging:
+  level:
+    # Enabling trace for app specific logging.
+    com.barclays: INFO
+    org.springframework: INFO
+    org.springframework.web: INFO
+
+kafka:
+  broker:
+    address: localhost:9092
+
+message:
+  topic:
+    payments: payments
+
+
+
+
